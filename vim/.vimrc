@@ -6,7 +6,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'ajh17/vimcompletesme'
   Plug 'vim-python/python-syntax'
   Plug 'tmhedberg/SimpylFold'
-  
+  Plug 'nvie/vim-flake8'
+ 
 call plug#end()
 
 
@@ -21,14 +22,11 @@ set hlsearch            " highlight matches
 set foldmethod=indent
 set foldlevel=99
 
-" if slow exit from insert mode, uncomment:
-set ttimeoutlen=5  
-
-" gvim settings
+" gvim settings 
 set transparency=10     " transparency for gvim
 set blur=20             " blur gvim window
 
-
+" syntax highlighting 
 let python_highlight_all=1
 syntax on
 
@@ -37,11 +35,13 @@ let g:lightline = {
       \ }
 set laststatus=2
 
-let NERDTreeMinimalUI=1
+let NERDTreeMinimalUI=1 
+let NERDTreeQuitOnOpen=1 " close after opening file
 
-map <F1> :NERDTreeToggle<CR>
+map <F1> :NERDTreeFind<CR>
 map <F2> :setlocal spell! spelllang=en_gb<CR>
 map <F3> :nohlsearch<CR>
+map <F4> :set cc=<CR>
 
 " auto close
 inoremap " ""<left>
