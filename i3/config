@@ -168,7 +168,7 @@ bindsym $mod+Shift+x exec i3lock --color "$bg-color"
 bindsym $mod+p exec spotify
 
 # set wallpaper
-exec_always feh --bg-scale /home/george/Pictures/10-14-Mojave-7.jpg
+exec_always feh --bg-scale /home/george/Pictures/10-14-Mojave-9.jpg 
 
 # set multiple screen orientation
 exec_always xrandr --output DisplayPort-0 --primary --mode 1920x1080 --pos 1080x696 --rotate normal --output DVI-1 --off --output DVI-0 --off --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate right
@@ -178,6 +178,9 @@ for_window [class=".*"] border pixel 0
 
 # smart gaps
 smart_gaps on
+
+# compton
+exec compton
 
 # toggle i3status bar
 bindsym $mod+m bar mode toggle
@@ -197,9 +200,6 @@ mode "$mode_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-
-# picom
-exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
 # toggle split
 bindsym $mod+q split toggle
