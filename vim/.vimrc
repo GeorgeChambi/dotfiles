@@ -21,6 +21,9 @@ set hlsearch            " highlight matches
 set foldmethod=indent
 set foldlevel=99
 
+" if slow exit from insert mode, uncomment:
+set ttimeoutlen=5  
+
 " gvim settings
 set transparency=10     " transparency for gvim
 set blur=20             " blur gvim window
