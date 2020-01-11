@@ -42,6 +42,7 @@ map <F1> :NERDTreeFind<CR>
 map <F2> :setlocal spell! spelllang=en_gb<CR>
 map <F3> :nohlsearch<CR>
 map <F4> :set cc=<CR>
+map <F8> :call flake8#Flake8()<CR>
 
 " auto close
 inoremap " ""<left>
